@@ -432,7 +432,7 @@ class AnnotationWidget(QtWidgets.QWidget, WIDGET):
                     rec['annotations'][row][header] = 0.0
                 self.display_bboxes()
         elif header in ('o', 't', 'd'):
-            checked = self.tw_labels.item(row, column).checkState() == QtCore.Qt.Checked
+            checked = self.tw_labels.item(row, column).checkState() == QtCore.Qt.CheckState.Checked
             text = "Y" if checked else "N"
             mapping = {'o': 'occluded', 't': 'truncated', 'd': 'difficult'}
             header = mapping[header]
